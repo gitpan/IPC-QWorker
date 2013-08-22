@@ -1,12 +1,12 @@
 {
-   "abstract" : "Perl extension for processing a queue in parallel",
+   "abstract" : "processing a queue in parallel",
    "author" : [
       "Markus Benning <me@w3r3wolf.de>"
    ],
-   "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110440",
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921",
    "license" : [
-      "restricted"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -16,24 +16,40 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.38"
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Data::Dumper" : "0",
+            "IO::Select" : "0",
+            "IO::Socket" : "0",
+            "Storable" : "0",
+            "perl" : "5.000",
+            "strict" : "0",
+            "utf8" : "0",
+            "warnings" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test" : "0"
          }
       }
    },
-   "provides" : {
-      "IPC::QWorker" : {
-         "file" : "lib/IPC/QWorker.pm",
-         "version" : "0.06"
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-IPC-QWorker@rt.cpan.org",
+         "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=IPC-QWorker"
       },
-      "IPC::QWorker::WorkUnit" : {
-         "file" : "lib/IPC/QWorker/WorkUnit.pm",
-         "version" : 0
-      },
-      "IPC::QWorker::Worker" : {
-         "file" : "lib/IPC/QWorker/Worker.pm",
-         "version" : 0
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/benningm/IPC-QWorker",
+         "web" : "https://github.com/benningm/IPC-QWorker.git"
       }
    },
-   "release_status" : "stable",
-   "version" : "0.06"
+   "version" : "0.07"
 }
+
